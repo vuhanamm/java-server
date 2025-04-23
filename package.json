@@ -36,9 +36,7 @@
     "node-xlsx": "^0.17.2",
     "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
+    "sass": "^1.87.0",
     "socket.io": "^4.4.0"
-  },
-  "devDependencies": {
-    "node-sass": "^6.0.1"
   }
 }
