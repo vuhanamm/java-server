@@ -130,7 +130,5 @@ io.sockets.on('connection', function (socket) {
 
 
 //kết nối
-
-
 server.listen(process.env.PORT || port)
 
