@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express();
 const handlebars = require('express-handlebars');
@@ -130,5 +131,6 @@ io.sockets.on('connection', function (socket) {
 
 
 //kết nối
-server.listen(process.env.PORT || port)
-
+server.listen(process.env.PORT || port, () => {
+    console.log(`Server running on port ${process.env.PORT || port}`);
+});
