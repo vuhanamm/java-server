@@ -2,19 +2,12 @@ const mongoose = require('mongoose');
 
 async function connect() {
     try {
-        mongoose.set('strictQuery', false);
-
-        const url = 'mongodb+srv://hangocluc2001_db_user:Luc2001@cluster0.nzd2jsk.mongodb.net/myDatabase';
-
-        await mongoose.connect(url, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-
-        console.log('✅ Connect to db success');
+        const url = 'mongodb+srv://java:9WBNRj9kxfT2qSqo@cluster0.ha1jjuf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+        var a = await mongoose.connect(url);
+        console.log('Connect to db success '+url)
     } catch (e) {
-        console.log('❌ Connect to db failed:', e.message);
+        console.log('Connect to db failed '+e)
     }
 }
 
-module.exports = { connect }
+module.exports = {connect}
