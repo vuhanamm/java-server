@@ -16,6 +16,15 @@ class LoginController {
         }
     }
 
+    // JSON-based login for API clients
+    loginApi(req, res) {
+        const { email, password } = req.body || {}
+        if (email === 'admin' && password === 'admin') {
+            return res.status(200).json({ success: true, message: 'success' })
+        }
+        return res.status(401).json({ success: false, message: 'Username or Password Invalid' })
+    }
+
 }
 
 module.exports = new LoginController()

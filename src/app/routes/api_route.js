@@ -8,6 +8,7 @@ const chatController = require('../controllers/ChatController')
 const feedback = require('../controllers/FeedBackController')
 const LessonController = require('../controllers/LessonController')
 const Notification = require('../controllers/NotificationController')
+const LoginController = require('../controllers/LoginController')
 
 
 //lesson
@@ -86,6 +87,9 @@ route.get('/get-all-comment', chatController.getAllChat)
 route.get('/get-comment-by-questionid', chatController.getChatByQuestion)
 
 route.post('/send-notifi-with-user', Notification.sendNotifiWithUser)
+
+// auth
+route.post('/login', LoginController.loginApi)
 
 module.exports = route
 
